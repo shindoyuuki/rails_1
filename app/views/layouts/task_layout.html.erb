@@ -18,7 +18,12 @@
         ❷このbodyタグ内にyieldと入っており、ここに各ページの内容として別途作成されたhtmlファイルの内容を持ってくるわけである。
         （そのためには rails g で作成する app/controllers/アプリ名_controller.rb と config/routes.rb で各ファイルをルーティングしてあげないといけないが）-->
     <footer>
-      <h1>現在の日時 : <%= Date.today.strftime('%Y年%m月%d日') %></h1>
+      <h1>現在の日時 : <%= Date.today.strftime('%Y年%m月%d日') %> スケジュール合計 : <%= @posts.ids.count %></h1> <!--idsとは、主キーのカラムデータを取得する-->
     </footer>    
   </body>
 </html>
+
+
+<!--現在の日付の説明 ↓
+https://www.javadrive.jp/ruby/date_class/index5.html
+-->
